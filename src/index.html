@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta name="author" content="KC Huang" />
+    <meta name="description" content="YouTube Downloader" />
+
+    <title>YouTube Downloader</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <h1>YouTube Downloader</h1>
+      </div>
+      <div>
+        <form>
+          <div>
+            <textarea
+              id="link-input"
+              placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            ></textarea>
+          </div>
+        </form>
+        <button id="download-video">Download Video (mp4)</button>
+        <button id="download-audio">Download Audio (mp3)</button>
+        <button id="set-folder">Choose Download Folder</button>
+        <button id="open-folder">Open Download Folder</button>
+      </div>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>
