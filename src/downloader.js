@@ -2,7 +2,6 @@ const ytdl = require('ytdl-core');
 const fs = require('fs');
 const path = require('path');
 const { dialog, shell } = require('electron');
-// const openExplorer = require('open-file-explorer');
 
 let downloadPath = __dirname;
 

@@ -1,6 +1,7 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: './images/icon',
   },
   rebuildConfig: {},
   makers: [
@@ -13,6 +14,15 @@ module.exports = {
         description: 'A YouTube downloader desktop app built with Electron',
       },
     },
+    // {
+    //   name: '@electron-forge/maker-dmg',
+    //   config: {
+    //     authors: 'KC',
+    //     description: 'A YouTube downloader desktop app built with Electron',
+    //     background: './assets/dmg-background.png',
+    //     format: 'ULFO',
+    //   },
+    // },
     {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin', 'linux'],

@@ -5,35 +5,71 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self'; script-src 'self'; style-src-elem 'self' https://cdn.jsdelivr.net"
     />
     <meta
       http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self'; script-src 'self'; style-src-elem 'self' https://cdn.jsdelivr.net"
     />
     <meta name="author" content="KC Huang" />
     <meta name="description" content="YouTube Downloader" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 
     <title>YouTube Downloader</title>
   </head>
   <body>
-    <div>
-      <div>
+    <div class="container mt-5">
+      <div class="text-center">
         <h1>YouTube Downloader</h1>
       </div>
-      <div>
-        <form>
-          <div>
-            <textarea
-              id="link-input"
-              placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            ></textarea>
+      <div class="row mt-4">
+        <div class="col-lg-6 mx-auto">
+          <form>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="link-input"
+                placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              ></textarea>
+            </div>
+          </form>
+          <div class="d-grid gap-2">
+            <div></div>
+            <button
+              class="btn btn-primary btn-block mb-2"
+              type="button"
+              id="download-video"
+            >
+              Download Video (mp4)
+            </button>
+            <button
+              class="btn btn-primary btn-block mb-2"
+              type="button"
+              id="download-audio"
+            >
+              Download Audio (mp3)
+            </button>
+            <button
+              class="btn btn-secondary btn-block mb-2"
+              type="button"
+              id="set-folder"
+            >
+              Choose Download Folder
+            </button>
+            <button
+              class="btn btn-secondary btn-block"
+              type="button"
+              id="open-folder"
+            >
+              Open Download Folder
+            </button>
           </div>
-        </form>
-        <button id="download-video">Download Video (mp4)</button>
-        <button id="download-audio">Download Audio (mp3)</button>
-        <button id="set-folder">Choose Download Folder</button>
-        <button id="open-folder">Open Download Folder</button>
+        </div>
       </div>
     </div>
   </body>
